@@ -1,0 +1,914 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>{% if page.category == 'home' or page.layout == 'products-article' %}
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>{% endif %}{% if page.category == 'about' %}
+    <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>{% endif %}
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="google-site-verification" content="pKqsf3jeh8AxRVyhdYhXhsYQ64jiwkQ7uWYh9KPrSnU">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/asiasilvervine-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="Asiasilvervine">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <style amp-custom>body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #606060;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+a {
+  color: #aeb700;
+  text-decoration: none;
+}
+a:hover {
+  color: #aeb700;
+  text-decoration: none;
+}
+hr {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: 0;
+  border-top: 1px solid #ededed;
+}
+/*Typography*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.3;
+  color: #606060;
+  margin-top: 0;
+}
+
+h1, .h1 {
+  margin-bottom: 28px;
+}
+
+h2, .h2 {
+  margin-bottom: 24px;
+}
+
+h3, .h3 {
+  margin-bottom: 20px;
+}
+
+h4, .h4 {
+  margin-bottom: 17px;
+}
+
+h5, h6, .h5, .h6 {
+  margin-bottom: 12px;
+}
+
+h1, .h1 {
+  font-size: 40px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: none;
+}
+
+h2, .h2 {
+  font-size: 30px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: none;
+}
+
+h3, .h3 {
+  font-size: 26px;
+  font-weight: 300;
+  font-style: normal;
+  text-transform: none;
+}
+
+h4, .h4 {
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+
+h5, .h5 {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+}
+
+h6, .h6 {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: none;
+}
+
+p {
+  margin: 0 0 20px;
+}
+small,
+.small {
+  font-size: 90%;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-green {
+  color: #aeb700;
+}
+.bg-green {
+    background-color: #aeb700;
+    color: #FFFFFF;
+}
+.bg-dark {
+  background-color: #f5f5f5;
+}
+.bg-nav {
+  background-color: #efefef;
+}
+.bg-nav-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/*Bootstrap*/
+.container {
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width:768px) {
+  .container {
+  width:750px
+}
+}
+@media (min-width:992px) {
+  .container {
+  width:970px
+}
+}
+@media (min-width:1200px) {
+  .container {
+  width:1170px
+}
+}
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9 {
+  padding-right:15px;
+  padding-left:15px;
+  box-sizing: border-box
+}
+@media (min-width:992px) {
+  .col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9 {
+  float:left
+}
+.col-md-12 {
+  width:100%
+}
+.col-md-11 {
+  width:91.66666667%
+}
+.col-md-10 {
+  width:83.33333333%
+}
+.col-md-9 {
+  width:75%
+}
+.col-md-8 {
+  width:66.66666667%
+}
+.col-md-7 {
+  width:58.33333333%
+}
+.col-md-6 {
+  width:50%
+}
+.col-md-5 {
+  width:41.66666667%
+}
+.col-md-4 {
+  width:33.33333333%
+}
+.col-md-3 {
+  width:25%
+}
+.col-md-2 {
+  width:16.66666667%
+}
+.col-md-1 {
+  width:8.33333333%
+}
+}
+@media (min-width:1200px) {
+  .col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9 {
+  float:left
+}
+.col-lg-12 {
+  width:100%
+}
+.col-lg-11 {
+  width:91.66666667%
+}
+.col-lg-10 {
+  width:83.33333333%
+}
+.col-lg-9 {
+  width:75%
+}
+.col-lg-8 {
+  width:66.66666667%
+}
+.col-lg-7 {
+  width:58.33333333%
+}
+.col-lg-6 {
+  width:50%
+}
+.col-lg-5 {
+  width:41.66666667%
+}
+.col-lg-4 {
+  width:33.33333333%
+}
+.col-lg-3 {
+  width:25%
+}
+.col-lg-2 {
+  width:16.66666667%
+}
+.col-lg-1 {
+  width:8.33333333%
+}
+}
+.container:after,.container:before,.row:after,.row:before {
+  display:table;
+  clear:both;
+  content:" "
+}
+/*Navigation*/
+.luxbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.luxbar-hamburger span, .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  display: block;
+  height: 2px;
+  width: 26px;
+  transition: 0.6s ease; }
+
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span {
+  background-color: transparent; }
+  .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::before, .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::after {
+  margin-top: 0; }
+
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px; }
+
+.luxbar-menu-left .luxbar-navigation, .luxbar-menu-left .luxbar-header {
+  justify-content: flex-start; }
+
+.luxbar-menu-right .luxbar-hamburger {
+  margin-left: auto; }
+
+.luxbar-brand {
+  font-size: 1.6em;
+  padding: 18px 24px 18px 24px; }
+
+.luxbar-menu {
+  min-height: 58px;
+  transition: 0.6s ease;
+  width: 100%; }
+
+.luxbar-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.luxbar-menu a,
+.luxbar-item a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+.luxbar-item {
+  height: 58px; }
+  .luxbar-item a {
+  padding: 18px 24px 18px 24px;
+  display: block; }
+
+.luxbar-hamburger {
+  padding: 18px 24px 18px 24px;
+  position: relative;
+  cursor: pointer; }
+  .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  content: '';
+  position: absolute; }
+  .luxbar-hamburger span::before {
+  margin-top: -8px; }
+  .luxbar-hamburger span::after {
+  margin-top: 8px; }
+
+.luxbar-checkbox {
+  display: none; }
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+  overflow: hidden;
+  height: 58px; }
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+  transition: height 0.6s ease;
+  height: 100vh;
+  overflow: auto; }
+
+.dropdown {
+  position: relative;
+  height: auto;
+  min-height: 58px; }
+  .dropdown:hover > ul {
+  position: relative;
+  display: block;
+  min-width: 100%; }
+  .dropdown > a::after {
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 25px;
+  border-width: 5px 5px 0;
+  border-color: transparent;
+  border-style: solid; }
+  .dropdown > ul {
+  display: block;
+  overflow-x: hidden;
+  list-style: none;
+  padding: 0; }
+  .dropdown > ul .luxbar-item {
+    min-width: 100%;
+    height: 29px;
+    padding: 5px 10px 5px 40px; }
+    .dropdown > ul .luxbar-item a {
+    min-height: 29px;
+    line-height: 29px;
+    padding: 0; }
+
+@media screen and (min-width: 768px) {
+  .luxbar-navigation {
+  flex-flow: row;
+  justify-content: flex-end; }
+
+  .luxbar-hamburger {
+  display: none; }
+
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+  overflow: visible; }
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+  height: 58px; }
+
+  .luxbar-menu .luxbar-item {
+  border-top: 0; }
+
+  .luxbar-menu-right .luxbar-header {
+  margin-right: auto; }
+
+  .dropdown {
+  height: 58px; }
+  .dropdown:hover > ul {
+    position: absolute;
+    left: 0;
+    top: 58px;
+    padding: 0; }
+  .dropdown > ul {
+    display: none; }
+    .dropdown > ul .luxbar-item {
+    padding: 5px 10px; }
+    .dropdown > ul .luxbar-item a {
+      white-space: nowrap; } }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::before {
+  transform: rotate(225deg); }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::after {
+  transform: rotate(-225deg); }
+
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::before {
+  transform: rotate(45deg); }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::after {
+  transform: rotate(-45deg); }
+
+/*Navigation Color White*/
+.luxbar-menu-white,.luxbar-menu-white .dropdown ul {
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 1;
+}
+.luxbar-menu-white .active,.luxbar-menu-white .luxbar-item:hover {
+  background-color: #e7e7e7; }
+.luxbar-menu-white .luxbar-hamburger span,.luxbar-menu-white .luxbar-hamburger span::before,.luxbar-menu-white .luxbar-hamburger span::after {
+  background-color: #000000; }
+
+/*image*/
+.image-margin-center {
+  margin: 0 auto 0 auto;
+}
+.img-width-400 {
+    max-width: 400px;
+}
+.img-width-500 {
+    max-width: 500px;
+}
+.img-width-800 {
+    max-width: 800px;
+}
+.img-width-973 {
+    max-width: 973px;
+}
+
+/*margin*/
+.margin-top-8 {
+  margin-top: 8px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-top-30 {
+  margin-top: 30px;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+.margin-top-50 {
+    margin-top: 50px;
+}
+.margin-top-58 {
+    margin-top: 58px;
+}
+.margin-top-70 {
+    margin-top: 70px;
+}
+.margin-top-80 {
+    margin-top: 80px;
+}
+.margin-btm-20 {
+  margin-bottom: 20px;
+}
+.margin-btm-30 {
+  margin-bottom: 30px;
+}
+.margin-btm-40 {
+  margin-bottom: 40px;
+}
+.margin-btm-50 {
+  margin-bottom: 50px;
+}
+.margin-btm-60 {
+  margin-bottom: 60px;
+}
+.margin-btm-80 {
+  margin-bottom: 80px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+/*Buttons*/
+.button {
+    display:inline-block;
+    padding:13px 20px;
+    margin:0px 0px 10px 0px;
+    font-size:14px;
+    transition:all 250ms ease;
+}
+.button-round {
+    border-radius:30px;
+}
+.button-full {
+    display:block;
+    text-align:center;
+}
+.button:hover {
+    opacity:0.9;
+    transition:all 250ms ease;
+    color: #FFFFFF;
+}
+
+/*Products*/
+.shop-item {
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.shop-item:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shop-item .shop-thumbnail {
+  position: relative;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.shop-item .shop-thumbnail .item-link {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.shop-item .shop-item-details {
+  display: table;
+  width: 100%;
+  padding: 24px 0;
+}
+
+.shop-item .shop-item-details .shop-item-title {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.shop-item .shop-item-details .shop-item-title {
+  width: 50%;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.shop-item .shop-item-details .shop-item-title > a {
+  color: #999;
+  text-decoration: none;
+}
+
+.shop-item:hover .shop-item-tools {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*Blog*/
+.blog-post-meta {
+  display: table;
+  width: 100%;
+  color: #999;
+  font-size: 14px;
+  padding-bottom: 18px;
+}
+
+.blog-post-meta .column {
+  display: table-cell;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+.blog-post-meta .column:last-child {
+  text-align: right;
+  margin-right: 0;
+}
+
+.blog-post-meta a:not(.read-more) {
+  color: #999;
+  text-decoration: none;
+}
+
+.blog-post-meta a:not(.read-more):hover, .blog-post-meta a:not(.read-more):focus, .blog-post-meta a:not(.read-more):active {
+  color: #606060;
+  text-decoration: none;
+}
+
+.blog-post-meta i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.blog-post-meta .divider {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 11px;
+  background-color: rgba(153, 153, 153, 0.5);
+  margin: 0 8px;
+}
+
+.blog-post-title,
+.blog-post-title > a {
+  color: #606060;
+  font-size: 22px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.blog-post-title:hover,
+.blog-post-title > a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+/*Footer*/
+.footer {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.footer .column {
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 45px 25px;
+}
+.footer .column:nth-of-type(even) {
+  background-color: #f0f0f0;
+}
+@media screen and (max-width: 991px) {
+  .footer .column {
+    display: block;
+    width: 100%;
+    padding: 45px 15px;
+  }
+}
+.footer .copyright {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 0;
+  margin-top: -5px;
+}
+.footer .news {
+  margin: 0 0 6px;
+}
+.widget-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.widget-title small {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  text-transform: none;
+  margin-top: 20px;
+}
+
+/*Error*/
+.error {
+  font-size: 180px;
+  color: #aeb700;
+}
+
+/*back to top*/
+.back-to-top {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  opacity: 1;
+  cursor: pointer;
+}</style>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",{% if page.category == 'home' or page.category == 'contact' or page.category == 'about' or page.title == 'Home Safes Lock' or page.title == 'Hotel Safes Lock' or page.title == 'Cabinet Lock' or page.title == 'Blog' %}
+        "@type": "{% if page.category == 'home' or page.title == 'Home Safes Lock' or page.title == 'Hotel Safes Lock' or page.title == 'Cabinet Lock' or page.title == 'Blog' %}WebPage{% endif %}{% if page.category == 'contact' %}ContactPage{% endif %}{% if page.category == 'about' %}AboutPage{% endif %}",
+        "url": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+        "name": "Asiasilvervine",
+        "headline":"{% if page.full_title %}{{ page.full_title }}{% else %}{{ page.title }}{% endif %}",
+        "description":"{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+        "lastReviewed":"{{ site.time | date_to_xmlschema }}",
+        "reviewedBy": {
+          "@type": "Organization",
+          "name": "Asiasilvervine"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "{{ site.url }}{{ page.url | replace:'index.html','' }}"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "name": "{{ site.url }}/images/assets/leader.jpg"
+        },{% endif %}{% if page.layout == 'products-article' %}
+        "@type": "Product",
+        "name": "{{ page.title }}",
+        "gtin13": "{{ page.gtin13 }}",
+        "brand": {
+          "@type": "Brand",
+          "name": "Asiasilvervine"
+        },
+        "category": {
+          "@type": "PhysicalActivityCategory",
+          "name": "{{ page.type }}"
+        },
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/images/assets/logo.jpg",
+            "width": 181,
+            "height": 60
+        },
+        "manufacturer": "Asiasilvervine",
+        "model": {
+          "@type": "ProductModel",
+          "name": "{{ page.title }}"
+        },
+        "productionDate": "{{ page.date | date_to_xmlschema }}",
+        "releaseDate": "{{ page.date | date_to_xmlschema }}",
+        "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+        "color": "{{ page.color }}",
+        "depth": "{{ page.depth }}",
+        "width": "{{ page.width }}",
+        "height": "{{ page.height }}",
+        "weight": "{{ page.weight }}",
+        "sku": "1",
+        "material": {
+          "@type": "Product",
+          "name": "{{ page.material }}"
+        },
+        "offers": {
+          "@type": "Offer",
+          "availability": "http://schema.org/InStock",
+          "price": "{{ page.price }}",
+          "priceCurrency": "USD",
+          "url": "{{ site.url }}{{ page.url }}",
+          "priceValidUntil": "2025-10-18T00:00:00+00:00"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "216"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": "{{ page.customer-1 }}",
+            "datePublished": "2018-08-08",
+            "description": "{{ page.reviews-description-1 }}",
+            "name": "{{ page.reviews-name-1 }}",
+            "reviewRating": {
+              "@type": "Rating",
+              "bestRating": "5",
+              "ratingValue": "5",
+              "worstRating": "1"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": "{{ page.customer-2 }}",
+            "datePublished": "2018-08-10",
+            "description": "{{ page.reviews-description-2 }}",
+            "name": "{{ page.reviews-name-2 }}",
+            "reviewRating": {
+              "@type": "Rating",
+              "bestRating": "5",
+              "ratingValue": "5",
+              "worstRating": "1"
+            }
+          }
+        ],
+        "sameAs": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+        "url": "{{ site.url }}{{ page.url | replace:'index.html','' }}",{% endif %}{% if page.layout == 'news-article' %}
+        "@type": "NewsArticle",
+        "mainEntityOfPage": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+        "headline": "{{ page.title }}",
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.date | date_to_xmlschema }}",
+        "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+        "keywords": "{{ page.keywords }}",
+        "author": {
+          "@type": "Person",
+          "name": "Asiasilvervine"
+        },{% if page.layout == 'news-article' %}
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/images/blog/{{ page.image }}.jpg",
+          "width": 750,
+          "height": 466
+        },{% endif %}{% endif %}{% if page.layout == 'products-article' or page.layout == 'news-article' %}{% else %}
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/images/assets/leader.jpg",
+          "width": 1200,
+          "height": 630
+        },{% endif %}{% if page.layout == 'products-article' %}
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/images/products/{{ page.image }}.jpg",
+          "width": 1000,
+          "height": 667
+        }{% else %}
+        "publisher": {
+          "@type": "Organization",
+          "name": "Asiasilvervine",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/images/assets/logo.jpg",
+            "width": 181,
+            "height": 60
+          }
+        }{% endif %}
+      }
+    </script>{% if page.title == 'Blog' %}{% for post in site.categories["news"] %}
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "mainEntityOfPage": "{{ site.url }}{{ post.url }}",
+        "headline": "{{ post.title }}",
+        "datePublished": "{{ post.date | date_to_xmlschema }}",
+        "dateModified": "{{ post.date | date_to_xmlschema }}",
+        "description": "{{ post.description }}",
+        "keywords": "{{ post.keywords }}",
+        "author": {
+          "@type": "Person",
+          "name": "Asiasilvervine"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/images/blog/{{ post.image }}.jpg",
+          "width": 750,
+          "height": 466
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Asiasilvervine",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/images/assets/logo.jpg",
+            "width": 181,
+            "height": 60
+          }
+        }
+      }
+    </script>{% endfor %}{% endif %}
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <header id="luxbar" class="luxbar-fixed">
+      <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox">
+      <div class="luxbar-menu luxbar-menu-right luxbar-menu-white">
+        <div class="container">
+          <ul class="luxbar-navigation">
+            <li class="luxbar-header">
+              <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/asiasilvervine-logo.png" width="105" height="52" class="margin-top-8" alt="Asiasilvervine Logo"></amp-img></a>
+              <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+            </li>
+            <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}"><a>Products</a>
+              <ul>
+                <li class="luxbar-item {% if page.type-en == 'cat-toy' %}active{% endif %}"><a href="{{ site.url }}/cat-toy/">Cat Toy</a></li>
+                <li class="luxbar-item {% if page.type-en == 'cat-teaser' %}active{% endif %}"><a href="{{ site.url }}/cat-teaser/">Cat Teaser</a></li>
+                <li class="luxbar-item {% if page.type-en == 'cat-tree' %}active{% endif %}"><a href="{{ site.url }}/cat-tree/">Cat Tree</a></li>
+              </ul>
+            </li>
+            <li class="luxbar-item {% if page.category == 'blog' %}active{% endif %}"><a href="{{ site.url }}/blog/">Blog</a></li>
+            <li class="luxbar-item dropdown {% if page.category == 'about' %}active{% endif %}"><a>About Asiasilvervine</a>
+              <ul>
+                <li class="luxbar-item {% if page.type-en == 'company-profile' %}active{% endif %}"><a href="{{ site.url }}/company-profile/">Company Profile</a></li>
+                <li class="luxbar-item {% if page.type-en == 'certificate' %}active{% endif %}"><a href="{{ site.url }}/certificate/">Certificate</a></li>
+              </ul>
+            </li>
+            <li class="luxbar-item {% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="margin-top-58"></div>
+    {{ content }}
+    <footer class="footer">
+      <div class="column">
+        <h3 class="widget-title">Last News</h3>{% for post in site.categories["news"] limit:3 %}
+        <p class="news"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></p>{% endfor %}
+      </div>
+      <div class="column">
+        <h3 class="widget-title">{{ site.company }}</h3>
+        <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/asiasilvervine-logo.png" width="105" height="52" class="margin-btm-20" alt="Asiasilvervine Logo"></amp-img></a>
+        <p class="copyright">Copyright © 2014-2019 {{ site.company }} | <a href="{{ site.url }}/sitemap.xml">Sitemap</a> | Website design by <a href="https://gdky.net" target="_blank">OSW</a></p>
+      </div>
+      <div class="column">
+        <h3 class="widget-title">Contact Us<small>Any Question ?</small></h3>
+        <p><a href="mailto:{{ site.email }}" class="button bg-red">Email: {{ site.email }}</a></p>
+      </div>
+    </footer>
+    <div class="back-to-top"><a href="#"><amp-img src="{{ site.url }}/images/assets/up.png" width="32" height="32" alt="Scroll Back to Top"></amp-img></a></div>
+  </body>
+</html>

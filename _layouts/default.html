@@ -11,7 +11,6 @@
     <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <meta name="google-site-verification" content="pKqsf3jeh8AxRVyhdYhXhsYQ64jiwkQ7uWYh9KPrSnU">
     <meta name="applicable-device" content="pc,mobile">
     <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/asiasilvervine-icon.jpg">
     <meta name="apple-mobile-web-app-title" content="Asiasilvervine">
@@ -432,11 +431,20 @@ small,
 .image-margin-center {
   margin: 0 auto 0 auto;
 }
+.img-width-300 {
+    max-width: 300px;
+}
 .img-width-400 {
     max-width: 400px;
 }
 .img-width-500 {
     max-width: 500px;
+}
+.img-width-600 {
+    max-width: 600px;
+}
+.img-width-700 {
+    max-width: 700px;
 }
 .img-width-800 {
     max-width: 800px;

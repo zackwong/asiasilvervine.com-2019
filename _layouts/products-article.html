@@ -4,13 +4,44 @@ layout: pages
 <div class="row">
   <div class="col-lg-6 col-md-6 margin-btm-40 image-margin-center">{% if page.pic == 'one' %}
     <div class="img-width-973">
-      <amp-img itemprop="image" src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}.jpg" width="973" height="615" layout="responsive" alt="{{ post.title }}"></amp-img>
+      <amp-img itemprop="image" src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-1.jpg" width="973" height="615" layout="responsive" alt="{{ post.title }}"></amp-img>
     </div>{% else %}
-    <amp-carousel width="800" height="600" layout="responsive" type="slides" autoplay delay="3500">
-      <amp-img src="{{ site.url }}/images/products/{{ page.image }}-1.jpg" width="800" height="600" layout="responsive" alt="{{ page.title }}"></amp-img>
-      <amp-img src="{{ site.url }}/images/products/{{ page.image }}-2.jpg" width="800" height="600" layout="responsive" alt="{{ page.title }}"></amp-img>
-      <amp-img src="{{ site.url }}/images/products/{{ page.image }}-3.jpg" width="800" height="600" layout="responsive" alt="{{ page.title }}"></amp-img>
-      <amp-img src="{{ site.url }}/images/products/{{ page.image }}-4.jpg" width="800" height="600" layout="responsive" alt="{{ page.title }}"></amp-img>
+    <amp-carousel width="800" height="600" layout="responsive" type="slides" autoplay delay="3500">{% if page.pic == 'two' %}
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-1.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-2.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>{% endif %}{% if page.pic == 'three' %}
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-1.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-2.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-3.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>{% endif %}{% if page.pic == 'four' %}
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-1.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-2.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-3.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-4.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>{% endif %}{% if page.pic == 'five' %}
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-1.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-2.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-3.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-4.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-5.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>{% endif %}{% if page.pic == 'six' %}
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-1.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-2.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-3.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-4.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-5.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-6.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>{% endif %}{% if page.pic == 'seven' %}
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-1.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-2.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-3.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-4.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-5.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-6.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-7.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>{% endif %}{% if page.pic == 'eight' %}
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-1.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-2.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-3.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-4.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-5.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-6.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-7.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>
+      <amp-img src="{{ site.url }}/images/products/{{ page.type-en }}-{{ page.model }}-8.jpg" width="973" height="615" layout="responsive" alt="{{ page.title }}"></amp-img>{% endif %}
     </amp-carousel>{% endif %}
   </div>
   <div class="col-lg-6 col-md-6 margin-btm-40">

@@ -635,7 +635,56 @@ small,
   color: #999;
   text-decoration: none;
 }
+/* Base class */
+.social-button {
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 18px;
+  margin-bottom: 5px;
+  transition: color .3s;
+  color: #606975;
+  font-size: 13px;
+  text-decoration: none;
+  vertical-align: middle;
+}
 
+.social-button.shape-circle, .social-button.shape-rounded, .social-button.shape-square {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+  border: 1px solid #e1e7ec;
+  line-height: 35px;
+  text-align: center;
+}
+
+.social-button.shape-circle {
+  border-radius: 50%;
+}
+
+.social-button.shape-rounded {
+  border-radius: 5px;
+}
+
+.social-button:focus {
+  text-decoration: none;
+}
+.sb-light-skin {
+  transition: all .3s;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sb-light-skin:hover, .sb-light-skin:focus {
+  color: #ffffff;
+}
+
+.sb-light-skin.shape-circle, .sb-light-skin.shape-rounded, .sb-light-skin.shape-square {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.sb-light-skin.shape-circle:hover, .sb-light-skin.shape-rounded:hover, .sb-light-skin.shape-square:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
 /*Footer*/
 .footer {
   display: table;
@@ -928,11 +977,16 @@ small,
         <p class="copyright">Website design by <a href="https://gdky.net" target="_blank">OSW</a></p>
       </div>
       <div class="column">
-        <h3 class="widget-title">Contact Us<small>Any Question ?</small></h3>
-        <p></p>
-        <p><i class="fas fa-map-marker-alt margin-right-10"></i>Address: {{ site.address }}</p>
-        <p><i class="fas fa-phone margin-right-10"></i>Phone: <a href="tel:{{ site.tel1 }}">{{ site.tel }}</a></p>
-        <p><i class="fas fa-envelope margin-right-10"></i>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <h3 class="widget-title">Contact Us</h3>
+        <p class="blog-foot-title"><i class="fas fa-map-marker-alt margin-right-10"></i>Address: {{ site.address }}</p>
+        <p class="blog-foot-title"><i class="fas fa-phone margin-right-10"></i>Phone: <a href="tel:{{ site.tel1 }}">{{ site.tel }}</a></p>
+        <p class="blog-foot-title"><i class="fas fa-envelope margin-right-10"></i>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <a itemprop="url" class="social-button shape-circle" href="{{ site.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a itemprop="url" class="social-button shape-circle" href="{{ site.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a itemprop="url" class="social-button shape-circle" href="{{ site.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a itemprop="url" class="social-button shape-circle" href="{{ site.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a itemprop="url" class="social-button shape-circle" href="{{ site.pinterest }}" target="_blank"><i class="fab fa-pinterest"></i></a>
+        <a itemprop="url" class="social-button shape-circle" href="{{ site.vimeo }}" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
     </footer>
     <div class="back-to-top"><a href="#"><amp-img src="{{ site.url }}/images/assets/up.png" width="32" height="32" alt="Scroll Back to Top"></amp-img></a></div>

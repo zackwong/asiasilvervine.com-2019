@@ -929,7 +929,10 @@ small,
       </div>
       <div class="column">
         <h3 class="widget-title">Contact Us<small>Any Question ?</small></h3>
-        <p><a href="mailto:{{ site.email }}" class="button bg-green">Email: {{ site.email }}</a></p>
+        <p></p>
+        <p><i class="fas fa-map-marker-alt margin-right-10"></i>Address: {{ site.address }}</p>
+        <p><i class="fas fa-phone margin-right-10"></i>Phone: <a href="tel:{{ site.tel1 }}">{{ site.tel }}</a></p>
+        <p><i class="fas fa-envelope margin-right-10"></i>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       </div>
     </footer>
     <div class="back-to-top"><a href="#"><amp-img src="{{ site.url }}/images/assets/up.png" width="32" height="32" alt="Scroll Back to Top"></amp-img></a></div>

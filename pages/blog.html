@@ -10,12 +10,12 @@ description: Blog
   <div class="col-lg-4 col-md-4">
     <div class="image-margin-center margin-btm-30"><a href="{{ site.url }}{{ post.url }}"><amp-img src="{{ site.url }}/images/blog/{{ post.image }}.jpg" width="800" height="533" layout="responsive" alt="{{ post.title }}"></amp-img></a></div>
   </div>
-  <div class="col-lg-8 col-md-8">
+  <div class="col-lg-8 col-md-8 text-center">
     <h2 class="blog-post-title"><a href="{{ site.url }}{{ post.url }}" class="ajax-post-link">{{ post.title }}</a></h2>
     <div class="blog-post-meta">{{ post.date | date:"%d %b %Y" }}</div>
     <p>{{ post.description }}</p>
     <div class="margin-top-30 text-center">
-      <a href="{{ site.url }}{{ post.url }}" class="button button-full bg-green">Read More</a>
+      <a href="{{ site.url }}{{ post.url }}" class="button bg-green">Read More</a>
     </div>
   </div>
 </div>

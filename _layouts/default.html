@@ -653,7 +653,7 @@ small,
   }
 }
 .footer .copyright {
-  font-size: 12px;
+  font-size: 14px;
   color: #999;
   margin-bottom: 0;
   margin-top: -5px;
@@ -896,17 +896,18 @@ small,
     {{ content }}
     <footer class="footer">
       <div class="column">
-        <h3 class="widget-title">Last News</h3>{% for post in site.categories["news"] limit:3 %}
+        <h3 class="widget-title">Last News</h3>{% for post in site.categories["blog"] limit:3 %}
         <p class="news"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></p>{% endfor %}
       </div>
       <div class="column">
         <h3 class="widget-title">{{ site.company }}</h3>
         <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/asiasilvervine-logo.png" width="105" height="52" class="margin-btm-20" alt="Asiasilvervine Logo"></amp-img></a>
-        <p class="copyright">Copyright © 2014-2019 {{ site.company }} | <a href="{{ site.url }}/sitemap.xml">Sitemap</a> | Website design by <a href="https://gdky.net" target="_blank">OSW</a></p>
+        <p class="copyright">Copyright © 2014-2019 {{ site.company }} | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
+        <p>Website design by <a href="https://gdky.net" target="_blank">OSW</a></p>
       </div>
       <div class="column">
         <h3 class="widget-title">Contact Us<small>Any Question ?</small></h3>
-        <p><a href="mailto:{{ site.email }}" class="button bg-red">Email: {{ site.email }}</a></p>
+        <p><a href="mailto:{{ site.email }}" class="button bg-green">Email: {{ site.email }}</a></p>
       </div>
     </footer>
     <div class="back-to-top"><a href="#"><amp-img src="{{ site.url }}/images/assets/up.png" width="32" height="32" alt="Scroll Back to Top"></amp-img></a></div>

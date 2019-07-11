@@ -124,9 +124,6 @@ small,
 .text-justify {
   text-align: justify;
 }
-.text-dark {
-  color: #606060;
-}
 .text-green {
   color: #aeb700;
 }
@@ -678,6 +675,18 @@ small,
   margin-top: 20px;
 }
 
+.blog-foot-title,
+.blog-foot-title > a {
+  color: #606060;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.blog-foot-title:hover,
+.blog-foot-title > a:hover {
+  color: #999;
+  text-decoration: none;
+}
 /*Error*/
 .error {
   font-size: 180px;
@@ -900,7 +909,7 @@ small,
     <footer class="footer">
       <div class="column">
         <h3 class="widget-title">Last Blog</h3>{% for post in site.categories["blog"] limit:5 %}
-        <p class="news text-dark"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></p>{% endfor %}
+        <p class="blog-foot-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></p>{% endfor %}
       </div>
       <div class="column">
         <h3 class="widget-title">{{ site.company }}</h3>

@@ -6,17 +6,23 @@ title: Blog
 keywords: Blog
 description: Blog
 ---
-{% for post in site.categories["blog"] %}<div class="row margin-top-30 margin-btm-30">
+<div class="col-lg-8 col-md-8">{% for post in site.categories["blog"] limit:3 %}
   <div class="col-lg-4 col-md-4">
-    <div class="image-margin-center margin-btm-30"><a href="{{ site.url }}{{ post.url }}"><amp-img src="{{ site.url }}/images/blog/{{ post.image }}.jpg" width="800" height="533" layout="responsive" alt="{{ post.title }}"></amp-img></a></div>
-  </div>
-  <div class="col-lg-8 col-md-8 text-center">
-    <h2 class="blog-post-title"><a href="{{ site.url }}{{ post.url }}" class="ajax-post-link">{{ post.title }}</a></h2>
-    <div class="blog-post-meta">{{ post.date | date:"%d %b %Y" }}</div>
-    <p>{{ post.description }}</p>
-    <div class="margin-top-30 text-center">
-      <a href="{{ site.url }}{{ post.url }}" class="button bg-green">Read More</a>
+    <div class="shop-item">
+      <div class="shop-thumbnail">
+        <a href="{{ site.url }}{{ post.url }}" class="item-link"></a>
+        <div class="img-width-800 image-margin-center">
+          <amp-img itemprop="image" src="{{ site.url }}/images/blog/{{ post.image }}.jpg" width="800" height="533" layout="responsive" alt="{{ post.title }}"></amp-img>
+        </div>
+      </div>
+      <div class="shop-item-details">
+        <h4 class="text-center blog-post-title margin-left-10 margin-right-10"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+        <p class="text-center margin-left-10 margin-right-10">{{ post.date | date:"%d %b %Y" }}</p>
+        <p class="margin-left-10 margin-right-10">{{ post.description }}</p>
+        <div class="text-center"><a href="{{ site.url }}{{ post.url }}" class="button bg-green">Read More</a></div>
+      </div>
     </div>
-  </div>
+  </div>{% endfor %}
 </div>
-<hr>{% endfor %}
+<div class="col-lg-4 col-md-4">
+</div>

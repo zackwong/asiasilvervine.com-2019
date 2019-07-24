@@ -174,10 +174,18 @@ small,
   width:1170px
 }
 }
-.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9 {
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-tx-4 {
   padding-right:15px;
   padding-left:15px;
   box-sizing: border-box
+}
+@media (min-width:500px) {
+  .col-tx-4 {
+  float:left
+}
+.col-tx-4 {
+  width:33.33333333%
+}
 }
 @media (min-width:992px) {
   .col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9 {
@@ -915,6 +923,7 @@ small,
     <div class="bg-black">
       <div class="container text-center">
         <h3 class="text-white margin-top-30">If you have cat products questions Pls tell us</h3>
+        <a itemprop="url" class="social-button shape-circle text-white" href="mailto:{{ site.email }}" target="_blank"><i class="fas fa-envelope text-white"></i></a>
         <a itemprop="url" class="social-button shape-circle text-white" href="{{ site.facebook }}" target="_blank"><i class="fab fa-facebook-f text-white"></i></a>
         <a itemprop="url" class="social-button shape-circle text-white" href="{{ site.twitter }}" target="_blank"><i class="fab fa-twitter text-white"></i></a>
         <a itemprop="url" class="social-button shape-circle text-white" href="{{ site.linkedin }}" target="_blank"><i class="fab fa-linkedin-in text-white"></i></a>

@@ -8,26 +8,30 @@ description: Blog
 ---
 <div class="row bg-nav">
   <div class="container text-center">
-    <h3 class="bg-nav-title">Are you looking for cat products?<br>I will tell you the whole process cat products.</h3>
+    <h4 class="bg-nav-title">Are you looking for cat products?<br>I will tell you the whole process cat products.</h4>
   </div>
 </div>
-<div class="col-lg-8 col-md-8">{% for post in site.categories["blog"] %}
-  <div class="col-lg-6 col-md-6">
-    <div class="shop-item">
-      <div class="shop-thumbnail">
-        <a href="{{ site.url }}{{ post.url }}" class="item-link"></a>
-        <div class="img-width-800 image-margin-center">
-          <amp-img itemprop="image" src="{{ site.url }}/images/blog/{{ post.image }}.jpg" width="800" height="533" layout="responsive" alt="{{ post.title }}"></amp-img>
+<div class="bg-dark">
+  <div class="container">
+    <div class="col-lg-8 col-md-8">{% for post in site.categories["blog"] %}
+      <div class="col-lg-6 col-md-6">
+        <div class="shop-item">
+          <div class="shop-thumbnail">
+            <a href="{{ site.url }}{{ post.url }}" class="item-link"></a>
+            <div class="img-width-800 image-margin-center">
+              <amp-img itemprop="image" src="{{ site.url }}/images/blog/{{ post.image }}.jpg" width="800" height="533" layout="responsive" alt="{{ post.title }}"></amp-img>
+            </div>
+          </div>
+          <div class="shop-item-details">
+            <h4 class="text-center blog-post-title margin-left-10 margin-right-10"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+            <p class="text-center margin-left-10 margin-right-10">{{ post.date | date:"%d %b %Y" }}</p>
+            <p class="margin-left-10 margin-right-10">{{ post.description }}</p>
+            <div class="text-center"><a href="{{ site.url }}{{ post.url }}" class="button bg-green">Read More</a></div>
+          </div>
         </div>
-      </div>
-      <div class="shop-item-details">
-        <h4 class="text-center blog-post-title margin-left-10 margin-right-10"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
-        <p class="text-center margin-left-10 margin-right-10">{{ post.date | date:"%d %b %Y" }}</p>
-        <p class="margin-left-10 margin-right-10">{{ post.description }}</p>
-        <div class="text-center"><a href="{{ site.url }}{{ post.url }}" class="button bg-green">Read More</a></div>
-      </div>
+      </div>{% endfor %}
     </div>
-  </div>{% endfor %}
-</div>
-<div class="col-lg-4 col-md-4">
+    <div class="col-lg-4 col-md-4">
+    </div>
+  </div>
 </div>

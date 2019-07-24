@@ -1,13 +1,18 @@
 ---
-layout: pages
+layout: default
 permalink: /blog/
 category: blog
 title: Blog
 keywords: Blog
 description: Blog
 ---
-<div class="col-lg-8 col-md-8">{% for post in site.categories["blog"] limit:3 %}
-  <div class="col-lg-4 col-md-4">
+<div class="row bg-nav">
+  <div class="container text-center">
+    <h3 class="bg-nav-title">Are you looking for cat products?<br>I will tell you the whole process cat products.</h3>
+  </div>
+</div>
+<div class="col-lg-8 col-md-8">{% for post in site.categories["blog"] %}
+  <div class="col-lg-6 col-md-6">
     <div class="shop-item">
       <div class="shop-thumbnail">
         <a href="{{ site.url }}{{ post.url }}" class="item-link"></a>

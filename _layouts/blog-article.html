@@ -1,7 +1,9 @@
 ---
-layout: pages
+layout: default
 ---
-<h2 class="text-center">{{ page.title }}</h2>
-<p class="text-center">{{ page.date | date:"%d %b %Y" }}</p>
-{{ content }}
-<p class="text-center margin-top-50"><a href="{{ site.url }}/blog/" class="button bg-green">More Blog</a></p>
+<div class="container margin-top-50 margin-btm-80">
+  <h2 class="text-center">{{ page.title }}</h2>
+  <p class="text-center">{{ page.date | date:"%d %b %Y" }}</p>
+  {{ content }}
+  <p class="text-center margin-top-50"><a href="{{ site.url }}/blog/" class="button bg-green">More Blog</a></p>
+</div>

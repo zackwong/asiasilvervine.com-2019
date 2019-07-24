@@ -4,11 +4,13 @@ layout: default
 <div class="bg-dark">
   <div class="container">
     <div class="col-lg-8 col-md-8">
-      <div class="shop-item margin-left-20 margin-right-20">
+      <div class="shop-item">
       	<div class="shop-item-details">
-      	  <h2 class="text-center margin-top-50">{{ page.title }}</h2>
-      	  <p class="text-center">{{ page.date | date:"%d %b %Y" }}</p>
-      	  {{ content }}
+          <div class="margin-left-20 margin-right-20">
+      	    <h2 class="text-center margin-top-50">{{ page.title }}</h2>
+      	    <p class="text-center">{{ page.date | date:"%d %b %Y" }}</p>
+      	    {{ content }}
+          </div>
       	</div>
       </div>
     </div>

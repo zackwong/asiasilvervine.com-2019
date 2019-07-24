@@ -952,12 +952,7 @@ small,
               </ul>
             </li>
             <li class="luxbar-item {% if page.category == 'blog' %}active{% endif %}"><a href="{{ site.url }}/blog/">Blog</a></li>
-            <li class="luxbar-item dropdown {% if page.category == 'about' %}active{% endif %}"><a>About Us</a>
-              <ul>
-                <li class="luxbar-item {% if page.type-en == 'company-profile' %}active{% endif %}"><a href="{{ site.url }}/company-profile/">Company Profile</a></li>
-                <li class="luxbar-item {% if page.type-en == 'certificate' %}active{% endif %}"><a href="{{ site.url }}/certificate/">Certificate</a></li>
-              </ul>
-            </li>
+            <li class="luxbar-item {% if page.category == 'about' %}active{% endif %}"><a href="{{ site.url }}/about/">About Us</a></li>
             <li class="luxbar-item {% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/">Contact Us</a></li>
           </ul>
         </div>
@@ -967,20 +962,8 @@ small,
     {{ content }}
     <footer class="footer">
       <div class="column">
-        <h3 class="widget-title">Last Blog</h3>{% for post in site.categories["blog"] limit:5 %}
-        <p class="blog-foot-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></p>{% endfor %}
-      </div>
-      <div class="column">
-        <h3 class="widget-title">{{ site.company }}</h3>
-        <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/asiasilvervine-logo-foot.png" width="200" height="100" class="margin-btm-20" alt="Asiasilvervine Logo"></amp-img></a>
-        <p class="copyright">Copyright © 2014-2019 {{ site.company }} | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
-        <p class="copyright">Website design by <a href="https://gdky.net" target="_blank">OSW</a></p>
-      </div>
-      <div class="column">
-        <h3 class="widget-title">Contact Us</h3>
-        <p class="blog-foot-title"><i class="fas fa-map-marker-alt margin-right-10"></i>Address: {{ site.address }}</p>
-        <p class="blog-foot-title"><i class="fas fa-phone margin-right-10"></i>Phone: <a href="tel:{{ site.tel1 }}">{{ site.tel }}</a></p>
-        <p class="blog-foot-title"><i class="fas fa-envelope margin-right-10"></i>Email: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <h3 class="widget-title">If you have cat products questions Pls tell us</h3>
+        
         <a itemprop="url" class="social-button shape-circle" href="{{ site.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a itemprop="url" class="social-button shape-circle" href="{{ site.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
         <a itemprop="url" class="social-button shape-circle" href="{{ site.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>

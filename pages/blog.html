@@ -31,7 +31,18 @@ description: Blog
         </div>
       </div>{% endfor %}
     </div>
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-4 col-md-4 hidden-xs">
+      <div class="shop-item">
+        <div class="shop-thumbnail">
+          <div class="img-width-800 image-margin-center">
+            <amp-img itemprop="image" src="{{ site.url }}/images/blog/{{ post.image }}.jpg" width="800" height="533" layout="responsive" alt="{{ post.title }}"></amp-img>
+            </div>
+          </div>
+          <div class="shop-item-details">
+            <p class="text-center margin-left-10 margin-right-10">Speak to the ever best natural Silvervine toys manufacturer now!</p>
+            <div class="text-center"><a href="mailto:{{ site.email }}" class="button bg-green">I Need a Price NOW!</a></div>
+          </div>
+        </div>
     </div>
   </div>
 </div>

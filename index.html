@@ -32,50 +32,24 @@ full_title: Asiasilvervine
   </div>
 </div>
 <div class="bg-dark">
-<div class="container margin-btm-20">
-  <h3 class="text-center margin-top-40">WHAT WE CAN OFFER<br><span class="text-green">Asiasilvervine Cat Products</span></h3>
-  <div class="row margin-btm-40">
-    <div class="col-lg-4 col-md-4 col-tx-4">
-      <div class="shop-item">
-        <div class="shop-thumbnail">
-          <a href="{{ site.url }}/cat-toy/" class="item-link"></a>
-          <div class="img-width-973 image-margin-center">
-            <amp-img itemprop="image" src="{{ site.url }}/images/products/cat-toy.jpg" width="973" height="615" layout="responsive" alt="Cat Toy"></amp-img>
+  <div class="container margin-btm-20">
+    <h3 class="text-center margin-top-40">WHAT WE CAN OFFER<br><span class="text-green">Asiasilvervine Cat Products</span></h3>
+    <div class="row margin-btm-40">{% for post in site.categories["products"] %}
+      <div class="col-lg-3 col-md-3 col-tx-6">
+        <div class="shop-item">
+          <div class="shop-thumbnail">
+            <a href="{{ site.url }}{{ post.url }}" class="item-link"></a>
+            <div class="img-width-973 image-margin-center">
+              <amp-img itemprop="image" src="{{ site.url }}/images/home/{{ post.image }}.jpg" width="973" height="615" layout="responsive" alt="{{ post.title }}"></amp-img>
+            </div>
+          </div>
+          <div class="shop-item-details">
+            <h3 class="shop-item-title text-center"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
           </div>
         </div>
-        <div class="shop-item-details">
-          <h3 class="shop-item-title text-center"><a href="{{ site.url }}/cat-toy/">Cat Toy</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-tx-4">
-      <div class="shop-item">
-        <div class="shop-thumbnail">
-          <a href="{{ site.url }}/cat-teaser/" class="item-link"></a>
-          <div class="img-width-973 image-margin-center">
-            <amp-img itemprop="image" src="{{ site.url }}/images/products/cat-teaser.jpg" width="973" height="615" layout="responsive" alt="Cat Teaser"></amp-img>
-          </div>
-        </div>
-        <div class="shop-item-details">
-          <h3 class="shop-item-title text-center"><a href="{{ site.url }}/cat-teaser/">Cat Teaser</a></h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-tx-4">
-      <div class="shop-item">
-        <div class="shop-thumbnail">
-          <a href="{{ site.url }}/cat-tree/" class="item-link"></a>
-          <div class="img-width-973 image-margin-center">
-            <amp-img itemprop="image" src="{{ site.url }}/images/products/cat-tree.jpg" width="973" height="615" layout="responsive" alt="Cat Tree"></amp-img>
-          </div>
-        </div>
-        <div class="shop-item-details">
-          <h3 class="shop-item-title text-center"><a href="{{ site.url }}/cat-tree/">Cat Tree</a></h3>
-        </div>
-      </div>
+      </div>{% endfor %}
     </div>
   </div>
-</div>
 </div>
 <div class="container margin-top-40 margin-btm-40">
   <h3 class="text-center">Learn More About How To Buy the cat products?<br><span class="hidden-xs">Want to learn how to identify bad quality cat products?</span></h3>

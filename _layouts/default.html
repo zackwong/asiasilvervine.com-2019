@@ -174,14 +174,14 @@ small,
   width:1170px
 }
 }
-.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-tx-4 {
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-tx-6 {
   padding-right:15px;
   padding-left:15px;
   box-sizing: border-box
 }
-.col-tx-4 {
+.col-tx-6 {
   float:left;
-  width:33.33333333%
+  width:50%
 }
 @media (min-width:992px) {
   .col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9 {
@@ -908,11 +908,9 @@ small,
               <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/asiasilvervine-logo.png" width="105" height="52" class="margin-top-8" alt="Asiasilvervine Logo"></amp-img></a>
               <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
             </li>
-            <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}"><a>Products</a>
-              <ul>
-                <li class="luxbar-item {% if page.type-en == 'cat-toy' %}active{% endif %}"><a href="{{ site.url }}/cat-toy/">Cat Toy</a></li>
-                <li class="luxbar-item {% if page.type-en == 'cat-teaser' %}active{% endif %}"><a href="{{ site.url }}/cat-teaser/">Cat Teaser</a></li>
-                <li class="luxbar-item {% if page.type-en == 'cat-tree' %}active{% endif %}"><a href="{{ site.url }}/cat-tree/">Cat Tree</a></li>
+            <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}"><a href="{{ site.url }}/products/">Products</a>
+              <ul>{% for post in site.categories["products"] %}
+                <li class="luxbar-item {% if post.title == page.title %}active{% endif %}"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
               </ul>
             </li>
             <li class="luxbar-item {% if page.category == 'blog' %}active{% endif %}"><a href="{{ site.url }}/blog/">Blog</a></li>

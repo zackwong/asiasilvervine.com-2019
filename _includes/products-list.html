@@ -1,8 +1,8 @@
 {% for post in site.categories["products"] %}<div class="row">
-  <div class="col-lg-6 col-md-6">
+  <div class="col-lg-5 col-md-5">
     <amp-img itemprop="image" src="{{ site.url }}/images/products/{{ post.image }}.jpg" width="570" height="300" layout="responsive" alt="{{ post.title }}"></amp-img>
   </div>
-  <div class="col-lg-6 col-md-6">
+  <div class="col-lg-7 col-md-7">
     <h3>{{ post.subtitle }}</h3>
     <p>{{ post.subdescription }}</p>
     <p><a href="{{ site.url }}{{ post.url }}" class="button bg-green">Read More</a></p>

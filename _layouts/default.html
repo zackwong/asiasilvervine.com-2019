@@ -472,9 +472,6 @@ small,
 }
 
 /*margin*/
-.margin-top-8 {
-  margin-top: 8px;
-}
 .margin-top-20 {
   margin-top: 20px;
 }
@@ -905,7 +902,7 @@ small,
         <div class="container">
           <ul class="luxbar-navigation">
             <li class="luxbar-header">
-              <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/asiasilvervine-logo.png" width="105" height="52" class="margin-top-8" alt="Asiasilvervine Logo"></amp-img></a>
+              <a href="{{ site.url }}"><amp-img src="{{ site.url }}/images/assets/asiasilvervine-logo.webp" width="105" height="52" alt="Asiasilvervine Logo"><amp-img fallback src="{{ site.url }}/images/assets/asiasilvervine-logo.jpg" width="105" height="52" alt="Asiasilvervine Logo"></amp-img></amp-img></a>
               <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
             </li>
             <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}"><a href="{{ site.url }}/products/">Products</a>
@@ -935,6 +932,6 @@ small,
         <div class="margin-btm-30"></div>
       </div>
     </div>
-    <div class="back-to-top"><a href="#"><amp-img src="{{ site.url }}/images/assets/up.png" width="32" height="32" alt="Scroll Back to Top"></amp-img></a></div>
+    <div class="back-to-top"><a href="#"><amp-img src="{{ site.url }}/images/assets/up.webp" width="32" height="32" alt="Scroll Back to Top"><amp-img fallback src="{{ site.url }}/images/assets/up.png" width="32" height="32" alt="Scroll Back to Top"></amp-img></amp-img></a></div>
   </body>
 </html>

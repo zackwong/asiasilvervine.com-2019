@@ -582,6 +582,18 @@ small,
   opacity: 1;
 }
 
+/*Reviews*/
+.reviews-box {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #777;
+}
+.reviews-box i {
+  color: #ffc001;
+  font-size: 18px;
+}
+
 /*Blog*/
 .blog-post-meta {
   display: table;

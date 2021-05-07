@@ -14,7 +14,7 @@ Asiasilvervine英文官网2019年版
     server {
       listen 443 ssl http2;
       server_name asiasilvervine.com;
-      ssl_certificate asiasilvervine.crt;
+      ssl_certificate asiasilvervine.pem;
       ssl_certificate_key asiasilvervine.key;
       index index.html;
       root /srv/asiasilvervine.com-2019/_site;
@@ -26,7 +26,7 @@ Asiasilvervine英文官网2019年版
     server {
         listen 443 ssl http2;
         server_name www.asiasilvervine.com;
-        ssl_certificate asiasilvervine.crt;
+        ssl_certificate asiasilvervine.pem;
         ssl_certificate_key asiasilvervine.key;
         return 301 https://asiasilvervine.com$request_uri;
     }
